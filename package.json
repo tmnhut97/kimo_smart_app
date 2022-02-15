@@ -1,0 +1,63 @@
+{
+  "name": "kimo_smart_app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "postinstall": "node node_modules/react-native-wss/scripts/postinstall.js"
+  },
+  "dependencies": {
+    "@react-native-community/art": "^1.2.0",
+    "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/checkbox": "^0.5.3",
+    "@react-native-community/datetimepicker": "^3.0.9",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/netinfo": "^5.9.9",
+    "@react-native-voice/voice": "^3.1.0",
+    "@react-navigation/native": "^5.7.0",
+    "@react-navigation/stack": "^5.7.0",
+    "@reduxjs/toolkit": "^1.4.0",
+    "@taoqf/react-native-wheel-picker": "^1.0.6",
+    "lottie-ios": "3.1.8",
+    "lottie-react-native": "^5.0.1",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-native": "0.67.2",
+    "react-native-fs": "^2.16.6",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-orientation-locker": "^1.2.0",
+    "react-native-permissions": "^2.1.5",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-safe-area-context": "^3.1.1",
+    "react-native-screens": "^2.9.0",
+    "react-native-send-intent": "^1.2.2",
+    "react-native-svg": "^12.1.0",
+    "react-native-touch-id": "^4.4.1",
+    "react-native-vector-icons": "^7.0.0",
+    "react-native-version-number": "^0.3.6",
+    "react-native-wifi-reborn": "^4.2.2",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "yauzl": "^2.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/runtime": "^7.17.2",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.9.0",
+    "jest": "^27.5.1",
+    "metro-react-native-babel-preset": "^0.68.0",
+    "react-native-wss": "^1.0.14",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
