@@ -10,7 +10,7 @@ let cameraid = null;
 
 export let reConnectSocketData = null
 export const server = async () => {
-    let server = { ip: 'kimovn.com', port: 53100, wss:true }
+    let server = { ip: 'kimovn.com', port: 53101, wss:false }
     const serverLocal = await getItemLocalStore('server')
     if (serverLocal) server = serverLocal
     const ca = await getCertFs('test.crt')

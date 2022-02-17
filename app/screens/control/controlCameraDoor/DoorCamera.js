@@ -16,7 +16,7 @@ import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
 import {NeuButton} from '../../NeuView';
 import Icon from 'react-native-vector-icons/dist/FontAwesome5';
-// import WebView from 'react-native-webview';
+import WebView from 'react-native-webview';
 import {
     getDevLogin, getExIp,
     wsControlCamera,

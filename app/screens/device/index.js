@@ -233,7 +233,7 @@ const Device = () => {
                                 if (status === CONNECTING) {
                                     setIsEditState(false)
                                     if (type === 'DOORCAM') {
-                                        // return navigation.navigate('DoorCamera');
+                                        return navigation.navigate('DoorCamera');
                                     }
                                     if (type === 'ACC') {
                                         return navigation.navigate('ControlAir');
@@ -241,7 +241,6 @@ const Device = () => {
                                     dispatch(setToast({show: 'WARNING', data: LG.receivedDevice}));
                                 }
                                 dispatch(setToast({show: 'WARNING', data: LG.noConnectWithThisDevice}));
-                                // return navigation.navigate('ControlAir');
                             }}
                             renderItem={(item, index) => {
                                 return <ItemDevice LG={LG} data={item} isEditState={isEditState}/>;
