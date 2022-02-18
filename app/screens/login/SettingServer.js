@@ -33,8 +33,8 @@ const SettingServer = () => {
             BackHandler.removeEventListener('hardwareBackPress', Out);
     }, []);
     const [ip, setIp ] = useState('kimovn.com')
-    const [port, setPort ] = useState('53100')
-    const [wss, setWss ] = useState(true)
+    const [port, setPort ] = useState('53101')
+    const [wss, setWss ] = useState(false)
     const setServer = () => {
         Keyboard.dismiss()
         const dataSet = { ip, port, wss }
