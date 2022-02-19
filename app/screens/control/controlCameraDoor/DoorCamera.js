@@ -435,15 +435,15 @@ const DoorCamera = () => {
                                 activeOpacity={0.9}
                                 style={!fullScreen ? styles.frameActionCamera : styles.fullScreen}
                             >
-                                {/*{*/}
-                                {/*    camExternal.myCam ?*/}
-                                {/*        <WebView*/}
-                                {/*            containerStyle={{ padding: 0, margin:0}}*/}
-                                {/*            source={{ uri: `http://admin:admin@115.78.5.184:8899${camExternal.scrips.view}` }}*/}
-                                {/*            headers={{ Authorization: `Basic ${Base64.btoa(`admin:admin`)}`}}*/}
-                                {/*        /> :*/}
-                                {/*        <ShowCamExternal camExternal={camExternal}/>*/}
-                                {/*}*/}
+                                {
+                                    camExternal.myCam ?
+                                        <WebView
+                                            containerStyle={{ padding: 0, margin:0}}
+                                            source={{ uri: `http://admin:admin@115.78.5.184:8899${camExternal.scrips.view}` }}
+                                            headers={{ Authorization: `Basic ${Base64.btoa(`admin:admin`)}`}}
+                                        /> :
+                                        <ShowCamExternal camExternal={camExternal}/>
+                                }
                             </View> :
                             <TouchableOpacity
                                 onPress={() => {
@@ -657,11 +657,11 @@ const ShowCamExternal = ({camExternal}) => {
     }, [camExternal])
     return (
         <>
-            {/*<WebView*/}
-            {/*    containerStyle={{ padding: 0, margin:0}}*/}
-            {/*    source={{ uri: path }}*/}
-            {/*    headers={{Authorization: `Basic ${Base64.btoa(`${user}:${pass}`)}`}}*/}
-            {/*/>*/}
+            <WebView
+                containerStyle={{ padding: 0, margin:0}}
+                source={{ uri: path }}
+                headers={{Authorization: `Basic ${Base64.btoa(`${user}:${pass}`)}`}}
+            />
         </>
     )
 }
@@ -684,16 +684,15 @@ const ShowCamera = ({src, setting}) => {
             </Animated.View>
         );
     }
-    return <></>
-    // return (
-    //     <WebView
-    //         containerStyle={{ padding: 0, margin:0}}
-    //         originWhitelist={['*']}
-    //         contentMode={'mobile'}
-    //         pullToRefreshEnabled={true}
-    //         source={{html: '<body style="margin: 0 !important;padding: 0 !important;"><embed type="image/jpg" style="object-fit:cover;background-color: #353A40" width="100%" height="100%" src="' + source + '" /></body>'}}
-    //     />
-    // );
+    return (
+        <WebView
+            containerStyle={{ padding: 0, margin:0}}
+            originWhitelist={['*']}
+            contentMode={'mobile'}
+            pullToRefreshEnabled={true}
+            source={{html: '<body style="margin: 0 !important;padding: 0 !important;"><embed type="image/jpg" style="object-fit:cover;background-color: #353A40" width="100%" height="100%" src="' + source + '" /></body>'}}
+        />
+    );
 };
 
 const ReviewImageSave = ({imageSave, close, goToAlbumCamera}) => {
